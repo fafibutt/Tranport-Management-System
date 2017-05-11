@@ -11,7 +11,7 @@ namespace TransportManagementSystemFYP
 {
 
 
-    public partial class TransportManagerHome
+    public partial class StudentRegistrationView
     {
     }
 }

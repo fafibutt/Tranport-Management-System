@@ -59,51 +59,32 @@
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\form-elements.css" />
+    <Content Include="css\normalize.min.css" />
     <Content Include="css\skdslider.css" />
     <Content Include="css\style.css" />
     <Content Include="css\style2.css" />
-    <Content Include="images\1.jpg" />
-    <Content Include="images\2.jpg" />
-    <Content Include="images\3.jpg" />
-    <Content Include="images\4.jpg" />
-    <Content Include="images\5.jpg" />
-    <Content Include="images\abt.jpg" />
-    <Content Include="images\bus.jpg" />
-    <Content Include="images\dott.png" />
-    <Content Include="images\g1.jpg" />
-    <Content Include="images\g2.jpg" />
-    <Content Include="images\g3.jpg" />
-    <Content Include="images\g4.jpg" />
-    <Content Include="images\g5.jpg" />
-    <Content Include="images\g6.jpg" />
-    <Content Include="images\g7.jpg" />
-    <Content Include="images\g8.jpg" />
-    <Content Include="images\g9.jpg" />
-    <Content Include="images\hqdefault.jpg" />
-    <Content Include="images\left.png" />
-    <Content Include="images\pause.png" />
-    <Content Include="images\play.png" />
-    <Content Include="images\right.png" />
-    <Content Include="images\ser.jpg" />
-    <Content Include="images\stat.jpg" />
-    <Content Include="images\subscribe.png" />
-    <Content Include="images\t1.jpg" />
-    <Content Include="images\t2.jpg" />
-    <Content Include="images\t3.jpg" />
-    <Content Include="images\t4.jpg" />
-    <Content Include="images\themes.png" />
-    <Content Include="images\top-arrow.png" />
     <Content Include="js\bars.js" />
     <Content Include="js\bootstrap.js" />
+    <Content Include="js\index.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
+    <Content Include="js\jquery.backstretch.min.js" />
+    <Content Include="js\Loginjquery.min.js" />
     <Content Include="js\numscroller-1.0.js" />
+    <Content Include="js\scripts.js" />
     <Content Include="js\skdslider.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="RegisterDriver.aspx" />
     <Content Include="RegisterRoute.aspx" />
     <Content Include="RegisterStop.aspx" />
     <Content Include="RegisterVehicle.aspx" />
+    <Content Include="StudentCancelRegistration.aspx" />
+    <Content Include="StudentComplaint.aspx" />
     <Content Include="StudentHome.aspx" />
+    <Content Include="StudentRegistration.aspx" />
+    <Content Include="StudentRegistrationEdit.aspx" />
+    <Content Include="StudentRegistrationView.aspx" />
+    <Content Include="StudentRouteChange.aspx" />
     <Content Include="TransportManagerHome.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -151,12 +132,54 @@
     <Compile Include="Student.Master.designer.cs">
       <DependentUpon>Student.Master</DependentUpon>
     </Compile>
+    <Compile Include="StudentCancelRegistration.aspx.cs">
+      <DependentUpon>StudentCancelRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentCancelRegistration.aspx.designer.cs">
+      <DependentUpon>StudentCancelRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentComplaint.aspx.cs">
+      <DependentUpon>StudentComplaint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentComplaint.aspx.designer.cs">
+      <DependentUpon>StudentComplaint.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StudentHome.aspx.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StudentHome.aspx.designer.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistration.aspx.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegistration.aspx.designer.cs">
+      <DependentUpon>StudentRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistrationEdit.aspx.cs">
+      <DependentUpon>StudentRegistrationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegistrationEdit.aspx.designer.cs">
+      <DependentUpon>StudentRegistrationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegistrationView.aspx.cs">
+      <DependentUpon>StudentRegistrationView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegistrationView.aspx.designer.cs">
+      <DependentUpon>StudentRegistrationView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRouteChange.aspx.cs">
+      <DependentUpon>StudentRouteChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRouteChange.aspx.designer.cs">
+      <DependentUpon>StudentRouteChange.aspx</DependentUpon>
     </Compile>
     <Compile Include="TransportManager.Master.cs">
       <DependentUpon>TransportManager.Master</DependentUpon>
@@ -187,12 +210,16 @@
     <Content Include="Student.Master" />
     <Content Include="fonts\Asap-Regular.ttf" />
     <Content Include="fonts\Audiowide-Regular.ttf" />
+    <Content Include="scss\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title><%:Page.Title %>-Transport Management Sytem</title>
+    <title><%:Page.Title %>-Transport Information Sytem</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/skdslider.css" rel="stylesheet" />
@@ -84,20 +84,20 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registration<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Register </a></li>
-                                        <li><a href="#">Update Registration</a></li>
-                                        <li><a href="#">Cencel Registration</a></li>
-                                        <li><a href="#">View Registration</a></li>
+                                        <li><a href="StudentRegistration.aspx">Registration</a></li>
+                                        <li><a href="StudentRegistrationEdit.aspx">Edit Registration</a></li>
+                                        <li><a href="StudentCancelRegistration.aspx">Cencel Registration</a></li>
+                                        <li><a href="StudentRegistrationView.aspx">View Registration</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Complaint<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Register Complaint </a></li>
+                                        <li><a href="StudentComplaint.aspx">Register Complaint </a></li>
                                         <li><a href="#">Complaint Decision</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Route Change Request</a></li>
+                                <li><a href="StudentRouteChange.aspx">Route Change Request</a></li>
                                 <li><a href="#">Transportation Detail</a></li>
                             </ul>
                         </div>

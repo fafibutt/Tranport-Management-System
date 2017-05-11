@@ -10,60 +10,87 @@
 namespace TransportManagementSystemFYP {
     
     
-    public partial class RegisterVehicle {
+    public partial class StudentRouteChange {
         
         /// <summary>
-        /// VehicleID control.
+        /// UniID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox VehicleID;
+        protected global::System.Web.UI.WebControls.TextBox UniID;
         
         /// <summary>
-        /// VehicleName control.
+        /// LoadRouteDetail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox VehicleName;
+        protected global::System.Web.UI.WebControls.Button LoadRouteDetail;
         
         /// <summary>
-        /// VehicleNumber control.
+        /// City control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox VehicleNumber;
+        protected global::System.Web.UI.WebControls.TextBox City;
         
         /// <summary>
-        /// VehicleChassisNumber control.
+        /// Rote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox VehicleChassisNumber;
+        protected global::System.Web.UI.WebControls.TextBox Rote;
         
         /// <summary>
-        /// OwnerDropDown control.
+        /// Stop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList OwnerDropDown;
+        protected global::System.Web.UI.WebControls.TextBox Stop;
         
         /// <summary>
-        /// VehicleRegistration control.
+        /// StudentCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button VehicleRegistration;
+        protected global::System.Web.UI.WebControls.DropDownList StudentCity;
+        
+        /// <summary>
+        /// StudentRoute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList StudentRoute;
+        
+        /// <summary>
+        /// StudentStop control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList StudentStop;
+        
+        /// <summary>
+        /// RouteChange control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button RouteChange;
     }
 }

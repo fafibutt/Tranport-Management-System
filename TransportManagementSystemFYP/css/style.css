@@ -1063,7 +1063,6 @@ i.fa.fa-arrow-right {
 	font-family: 'Open Sans', sans-serif;
     color: #fff;
     border: none;
-    width: 34%;
 	transition:0.5s all;
  -webkit-transition:0.5s all;
  -moz-transition:0.5s all;
@@ -2244,9 +2243,6 @@ p.para {
 }
 .agile-sub {
     padding: 20px;
-}
-.contact-grid input[type="submit"] {
-    width: 48%;
 }
 .logo a {
     font-size: 30px;
