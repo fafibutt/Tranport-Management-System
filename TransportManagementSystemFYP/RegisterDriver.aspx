@@ -19,7 +19,7 @@
                     <asp:TextBox ID="DriverCNIC" placeholder="Driver CNIC..." required="" runat="server"></asp:TextBox>
                     <label>Driver Licence Number</label>
                     <asp:TextBox ID="LicenceNumber" placeholder="Driver licenec number..." required="" runat="server"></asp:TextBox>          
-                    <asp:Button ID="DriverRegistration" type="submit" runat="server" Text="Register Driver" />
+                    <asp:Button ID="DriverRegistration" type="submit" runat="server" Text="Register Driver" OnClick="DriverRegistration_Click" />
 
                 </div>
 

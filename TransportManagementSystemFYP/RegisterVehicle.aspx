@@ -16,8 +16,8 @@
                     <label>Vehicle Chassis Number</label>
                     <asp:TextBox ID="VehicleChassisNumber" placeholder="Vehicle chassis number..." required="" runat="server"></asp:TextBox>
                     <label>Vehile Owner</label>
-                    <asp:DropDownList ID="OwnerDropDown" CssClass="form-control" runat="server"></asp:DropDownList>
-                    <asp:Button ID="VehicleRegistration" type="submit" runat="server" Text="Register Vehicle" />
+                    <asp:TextBox ID="VehicleOwner" placeholder="Owner name..." required="" runat="server"></asp:TextBox>
+                    <asp:Button ID="VehicleRegistration" type="submit" runat="server" Text="Register Vehicle" OnClick="VehicleRegistration_Click" />
 
                 </div>
 

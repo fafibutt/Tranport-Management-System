@@ -49,13 +49,13 @@ namespace TransportManagementSystemFYP {
         protected global::System.Web.UI.WebControls.TextBox VehicleChassisNumber;
         
         /// <summary>
-        /// OwnerDropDown control.
+        /// VehicleOwner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList OwnerDropDown;
+        protected global::System.Web.UI.WebControls.TextBox VehicleOwner;
         
         /// <summary>
         /// VehicleRegistration control.

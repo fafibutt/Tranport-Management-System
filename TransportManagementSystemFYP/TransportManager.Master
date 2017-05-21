@@ -94,8 +94,8 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Driver<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="RegisterDriver.aspx">Register Driver</a></li>
-                                        <li><a href="#">Update Driver</a></li>
-                                        <li><a href="#">Delete Driver</a></li>
+                                        <li><a href="EditDriver.aspx">Update Driver</a></li>
+                                        <li><a href="DeleteDriver.aspx">Delete Driver</a></li>
                                         <li><a href="#">View Driver</a></li>
                                     </ul>
                                 </li>
@@ -103,8 +103,8 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vehicle<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="RegisterVehicle.aspx">Register Vehicle</a></li>
-                                        <li><a href="#">Update Vehicle</a></li>
-                                        <li><a href="#">Delete Vehicle</a></li>
+                                        <li><a href="EditVehicle.aspx">Update Vehicle</a></li>
+                                        <li><a href="DeleteVehicle.aspx">Delete Vehicle</a></li>
                                         <li><a href="#">View Vehicle</a></li>
                                     </ul>
                                 </li>
@@ -112,8 +112,8 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Route<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="RegisterRoute.aspx">Register Route</a></li>
-                                        <li><a href="#">Update Route</a></li>
-                                        <li><a href="#">Delete Route</a></li>
+                                        <li><a href="EditRoute.aspx">Update Route</a></li>
+                                        <li><a href="DeleteRoute.aspx">Delete Route</a></li>
                                         <li><a href="RegisterStop.aspx">Register Stop</a></li>
                                         <li><a href="#">Update Stop</a></li>
                                         <li><a href="#">Delete Stop</a></li>

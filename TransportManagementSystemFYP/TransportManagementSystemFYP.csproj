@@ -64,6 +64,12 @@
     <Content Include="css\skdslider.css" />
     <Content Include="css\style.css" />
     <Content Include="css\style2.css" />
+    <Content Include="DeleteDriver.aspx" />
+    <Content Include="DeleteRoute.aspx" />
+    <Content Include="DeleteVehicle.aspx" />
+    <Content Include="EditDriver.aspx" />
+    <Content Include="EditRoute.aspx" />
+    <Content Include="EditVehicle.aspx" />
     <Content Include="js\bars.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\index.js" />
@@ -89,6 +95,48 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeleteDriver.aspx.cs">
+      <DependentUpon>DeleteDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteDriver.aspx.designer.cs">
+      <DependentUpon>DeleteDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRoute.aspx.cs">
+      <DependentUpon>DeleteRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteRoute.aspx.designer.cs">
+      <DependentUpon>DeleteRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteVehicle.aspx.cs">
+      <DependentUpon>DeleteVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteVehicle.aspx.designer.cs">
+      <DependentUpon>DeleteVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDriver.aspx.cs">
+      <DependentUpon>EditDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDriver.aspx.designer.cs">
+      <DependentUpon>EditDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditRoute.aspx.cs">
+      <DependentUpon>EditRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRoute.aspx.designer.cs">
+      <DependentUpon>EditRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditVehicle.aspx.cs">
+      <DependentUpon>EditVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditVehicle.aspx.designer.cs">
+      <DependentUpon>EditVehicle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace TransportManagementSystemFYP
 {
@@ -11,7 +14,53 @@ namespace TransportManagementSystemFYP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+            }
+        }
 
+        protected void DriverRegistration_Click(object sender, EventArgs e)
+        {
+            String Status = "Active";
+            String DbString = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(DbString))
+            {
+                String query = "select DriverID,Name from Driver where DriverID =@DriverId and Name = @name";
+                SqlCommand command = new SqlCommand(query, conn);
+                command.Parameters.AddWithValue("@DriverId", DriverID.Text);
+                command.Parameters.AddWithValue("@name",DriverName.Text);
+                SqlDataAdapter SDA = new SqlDataAdapter(command);
+                DataTable DT = new DataTable();
+                SDA.Fill(DT);
+                if (DT.Rows.Count != 1)
+                {
+                    try
+                    {
+                        String Query = "INSERT into Driver(DriverID,Name,City,Address,PhoneNumber,CNIC,LicenceNumber,Status) values(@driverId,@name,@city,@address,@number,@cnic,@LN,@status)";
+                        SqlCommand sqlCommand = new SqlCommand(Query, conn);
+                        sqlCommand.Parameters.AddWithValue("@driverId",DriverID.Text);
+                        sqlCommand.Parameters.AddWithValue("@name", DriverName.Text);
+                        sqlCommand.Parameters.AddWithValue("@city", DriverCity.Text);
+                        sqlCommand.Parameters.AddWithValue("@address", DriverAddress.Text);
+                        sqlCommand.Parameters.AddWithValue("@number", DriverNumber.Text);
+                        sqlCommand.Parameters.AddWithValue("@cnic", DriverCNIC.Text);
+                        sqlCommand.Parameters.AddWithValue("@LN", LicenceNumber.Text);
+                        sqlCommand.Parameters.AddWithValue("@status", Status);
+                        conn.Open();
+                        sqlCommand.ExecuteNonQuery();
+                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
+                    }
+                    catch (SqlException sqlExce)
+                    {
+                        throw sqlExce;
+                    }
+                }
+                else
+                {
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data already exist')");
+                }
+            }
         }
     }
 }

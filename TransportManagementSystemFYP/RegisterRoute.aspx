@@ -8,12 +8,12 @@
 						<label>Route ID</label>
                         <asp:TextBox ID="RouteID" placeholder="Route Id..." required="" runat="server"></asp:TextBox>
 						<label>Route Name</label>
-						<asp:TextBox ID="RouteName" placeholder="Route name..." required="" runat="server"></asp:TextBox>
+						<asp:TextBox ID="RouteName" placeholder="Route name..."  required="" runat="server"></asp:TextBox>
 						<label>Route City</label>
-						<asp:TextBox ID="RouteCity" placeholder="Route city..." required="" runat="server"></asp:TextBox>
+						<asp:TextBox ID="RouteCity" placeholder="Route city..."  required="" runat="server"></asp:TextBox>
 						<label>Route Road</label>
-						<asp:TextBox ID="RouteRoad" placeholder="Route road..." required="" runat="server"></asp:TextBox>
-                        <asp:Button ID="RouteRegistration" type="submit" runat="server" Text="Register Route" />
+						<asp:TextBox ID="RouteRoad" placeholder="Route road..."  required="" runat="server"></asp:TextBox>
+                        <asp:Button ID="RouteRegistration" type="submit" runat="server" Text="Register Route" OnClick="RouteRegistration_Click" />
 						
 					</div>
 				
@@ -21,6 +21,5 @@
 				</div>
 		</div>
 	</div>
-
 <!--contact-->
 </asp:Content>
