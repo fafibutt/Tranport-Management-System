@@ -10,33 +10,33 @@
 namespace TransportManagementSystemFYP {
     
     
-    public partial class StudentComplaint {
+    public partial class AssignRouteToVehicle {
         
         /// <summary>
-        /// UniID control.
+        /// VehicleDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UniID;
+        protected global::System.Web.UI.WebControls.DropDownList VehicleDropDown;
         
         /// <summary>
-        /// StudentComplaintRegistration control.
+        /// RouteDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentComplaintRegistration;
+        protected global::System.Web.UI.WebControls.DropDownList RouteDropDown;
         
         /// <summary>
-        /// RegisterComplaint control.
+        /// AssignRoute control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterComplaint;
+        protected global::System.Web.UI.WebControls.Button AssignRoute;
     }
 }

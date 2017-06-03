@@ -7,9 +7,9 @@
                 <div class="col-md-12 contact-grid agileinfo-5">
                     <label>University ID</label>
                     <asp:TextBox ID="UniID" placeholder="University ID..." required="" runat="server"></asp:TextBox>
-                    <label>Name</label>
+                    <label>Complaint Description</label>
                     <asp:TextBox ID="StudentComplaintRegistration" placeholder="Your Complaint..." TextMode="MultiLine" required="" runat="server"></asp:TextBox>
-                    <asp:Button ID="Button1" type="submit" runat="server" Text="Update Registration" />
+                    <asp:Button ID="RegisterComplaint" type="submit" CssClass="btn pull-right" runat="server" Text="Register Complaint" OnClick="RegisterComplaint_Click"  />
                 </div>
                 <div class="clearfix"></div>
             </div>

@@ -5,8 +5,6 @@
             <h2 class="w3ls_head">Driver <span>Registration</span></h2>
             <div class="contact-grids">
                 <div class="col-md-12 contact-grid agileinfo-5">
-                    <label>Driver ID</label>
-                    <asp:TextBox ID="DriverID" placeholder="Driver ID..." required="" runat="server"></asp:TextBox>
                     <label>Driver Name</label>
                     <asp:TextBox ID="DriverName" placeholder="Driver name..." required="" runat="server"></asp:TextBox>
                     <label>Driver City</label>

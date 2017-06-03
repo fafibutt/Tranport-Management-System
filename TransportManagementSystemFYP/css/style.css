@@ -606,7 +606,7 @@ header {
     color: #fff;
 }
 
-    .navbar-default .navbar-nav > li > a.active, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+ .navbar-default .navbar-nav > li > a.active, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
         background: #86c724;
         color: #fff;
     }
@@ -626,7 +626,7 @@ header {
     padding: 6px 20px;
 }
 
-    .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+ .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
         color: #ffffff;
         text-decoration: none;
         background-color: #000000;

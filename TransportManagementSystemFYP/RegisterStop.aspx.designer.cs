@@ -22,15 +22,6 @@ namespace TransportManagementSystemFYP {
         protected global::System.Web.UI.WebControls.DropDownList RouteDropDown;
         
         /// <summary>
-        /// StopID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StopID;
-        
-        /// <summary>
         /// StopName control.
         /// </summary>
         /// <remarks>
@@ -58,13 +49,13 @@ namespace TransportManagementSystemFYP {
         protected global::System.Web.UI.WebControls.Button AddStopToList;
         
         /// <summary>
-        /// StopListBox control.
+        /// GridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox StopListBox;
+        protected global::System.Web.UI.WebControls.GridView GridView;
         
         /// <summary>
         /// StopRegistration control.

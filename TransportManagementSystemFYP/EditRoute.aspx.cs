@@ -27,21 +27,27 @@ namespace TransportManagementSystemFYP
         protected void BtnSearchRoute_Click(object sender, EventArgs e)
         {
             String BDstring = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(BDstring))
+            try
             {
-                String query = "SELECT * from Route where (RouteID = @routeId) OR (Name LIKE '%' + @RouteName + '%')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@routeId", SearchTextBox.Text);
-                cmd.Parameters.AddWithValue("@RouteName", SearchTextBox.Text);
-                conn.Open();
-                SqlDataReader SDR = cmd.ExecuteReader();
-                DataTable DT = new DataTable();
-                if (SDR.HasRows)
+                using (SqlConnection conn = new SqlConnection(BDstring))
                 {
-                    DT.Load(SDR);
-                    GridView.DataSource = DT;
-                    GridView.DataBind();
+                    String query = "SELECT * from Route where (RouteID LIKE '%' + @search + '%') OR (Name LIKE '%' + @search + '%')";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@search", SearchTextBox.Text);
+                    conn.Open();
+                    SqlDataReader SDR = cmd.ExecuteReader();
+                    DataTable DT = new DataTable();
+                    if (SDR.HasRows)
+                    {
+                        DT.Load(SDR);
+                        GridView.DataSource = DT;
+                        GridView.DataBind();
+                    }
                 }
+            }
+            catch (SqlException exe)
+            {
+                throw exe;
             }
         }
 

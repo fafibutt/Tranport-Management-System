@@ -5,28 +5,27 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace TransportManagementSystemFYP
 {
-    public partial class DeleteDriver : System.Web.UI.Page
+    public partial class DeleteStop : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void BtnSearchDriver_Click(object sender, EventArgs e)
+        protected void BtnSearchStop_Click(object sender, EventArgs e)
         {
-            String Status = "Active";
             String BDstring = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(BDstring))
+            try
             {
-                try
+                using (SqlConnection conn = new SqlConnection(BDstring))
                 {
-                    String query = "SELECT * FROM Driver d WHERE (d.Name LIKE @search OR d.DriverID LIKE @search) AND d.Status = 'Active'";
+                    String query = "SELECT * from Stop where (StopID LIKE '%' + @search + '%') OR (Name LIKE '%' + @search + '%')";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@search","%" + SearchTextBox.Text + "%");
+                    cmd.Parameters.AddWithValue("@search", SearchTextBox.Text);
                     conn.Open();
                     SqlDataReader SDR = cmd.ExecuteReader();
                     DataTable DT = new DataTable();
@@ -37,10 +36,10 @@ namespace TransportManagementSystemFYP
                         GridView.DataBind();
                     }
                 }
-                catch (SqlException exe)
-                {
-                    throw exe;
-                }
+            }
+            catch (SqlException exe)
+            {
+                throw exe;
             }
         }
         protected void GridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -51,9 +50,9 @@ namespace TransportManagementSystemFYP
             {
                 try
                 {
-                    String query = "update driver set Status = 'Unactive' where DriverID = @driverId";
+                    String query = "DELETE from Stop where StopID = @stopId";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@driverId", id);
+                    cmd.Parameters.AddWithValue("@stopId", id);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                 }
@@ -63,7 +62,6 @@ namespace TransportManagementSystemFYP
                 }
             }
         }
-
         protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != GridView.EditIndex)
@@ -71,7 +69,5 @@ namespace TransportManagementSystemFYP
                 (e.Row.Cells[0].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to delete this row?');";
             }
         }
-
-        
     }
 }

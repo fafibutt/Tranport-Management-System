@@ -32,10 +32,9 @@ namespace TransportManagementSystemFYP
             {
                 try
                 {
-                    String query = "SELECT * from Vehicle where (VehicleID = @vehicleId) OR (Name LIKE '%' + @VehicleName + '%')";
+                    String query = "SELECT * from Vehicle where (VehicleID LIKE '%' + @search + '%' OR Name LIKE '%' + @search + '%') AND Status = 'Active'";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@vehicleId", SearchTextBox.Text);
-                    cmd.Parameters.AddWithValue("@VehicleName", SearchTextBox.Text);
+                    cmd.Parameters.AddWithValue("@search", SearchTextBox.Text);
                     conn.Open();
                     SqlDataReader SDR = cmd.ExecuteReader();
                     DataTable DT = new DataTable();

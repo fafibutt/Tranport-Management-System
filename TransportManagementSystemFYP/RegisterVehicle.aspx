@@ -7,8 +7,6 @@
             <h2 class="w3ls_head">Vehicle <span>Registration</span></h2>
             <div class="contact-grids">
                 <div class="col-md-12 contact-grid agileinfo-5">
-                    <label>Vehicle ID</label>
-                    <asp:TextBox ID="VehicleID" placeholder="Vehicle ID..." required="" runat="server"></asp:TextBox>
                     <label>Vehicle Name</label>
                     <asp:TextBox ID="VehicleName" placeholder="Vehicle name..." required="" runat="server"></asp:TextBox>
                     <label>Vehicle Number</label>

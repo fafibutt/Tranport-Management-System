@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TransportManager.master.cs" Inherits="TransportManagementSystemFYP.TransportManager" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TransportManager.master.cs" ViewStateMode="Enabled" Inherits="TransportManagementSystemFYP.TransportManager" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -96,7 +96,7 @@
                                         <li><a href="RegisterDriver.aspx">Register Driver</a></li>
                                         <li><a href="EditDriver.aspx">Update Driver</a></li>
                                         <li><a href="DeleteDriver.aspx">Delete Driver</a></li>
-                                        <li><a href="#">View Driver</a></li>
+                                        <li><a href="ViewDriver.aspx">View Driver</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -105,7 +105,9 @@
                                         <li><a href="RegisterVehicle.aspx">Register Vehicle</a></li>
                                         <li><a href="EditVehicle.aspx">Update Vehicle</a></li>
                                         <li><a href="DeleteVehicle.aspx">Delete Vehicle</a></li>
-                                        <li><a href="#">View Vehicle</a></li>
+                                        <li><a href="ViewVehicle.aspx">View Vehicle</a></li>
+                                        <li><a href="AssignDriverToVehicle.aspx">Assign Driver</a></li>
+                                        <li><a href="AssignRouteToVehicle.aspx">Assign Route</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -114,11 +116,11 @@
                                         <li><a href="RegisterRoute.aspx">Register Route</a></li>
                                         <li><a href="EditRoute.aspx">Update Route</a></li>
                                         <li><a href="DeleteRoute.aspx">Delete Route</a></li>
+                                        <li><a href="ViewRoute.aspx">View Route</a></li>
                                         <li><a href="RegisterStop.aspx">Register Stop</a></li>
-                                        <li><a href="#">Update Stop</a></li>
-                                        <li><a href="#">Delete Stop</a></li>
-                                        <li><a href="#">View Route</a></li>
-                                        <li><a href="#">View Stop</a></li>
+                                        <li><a href="EditStop.aspx">Update Stop</a></li>
+                                        <li><a href="DeleteStop.aspx">Delete Stop</a></li>
+                                        <li><a href="ViewStop.aspx">View Stop</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">

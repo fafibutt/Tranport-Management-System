@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace TransportManagementSystemFYP
 {
@@ -11,7 +14,10 @@ namespace TransportManagementSystemFYP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            }
         }
     }
 }

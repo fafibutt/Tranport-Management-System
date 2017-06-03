@@ -12,24 +12,24 @@ namespace TransportManagementSystemFYP
 {
     public partial class RegisterDriver : System.Web.UI.Page
     {
+        String DbString = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+      
             }
         }
 
         protected void DriverRegistration_Click(object sender, EventArgs e)
         {
             String Status = "Active";
-            String DbString = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(DbString))
             {
-                String query = "select DriverID,Name from Driver where DriverID =@DriverId and Name = @name";
+                String query = "select CNIC from Driver where CNIC = @cnic";
                 SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@DriverId", DriverID.Text);
-                command.Parameters.AddWithValue("@name",DriverName.Text);
+                command.Parameters.AddWithValue("@cnic",DriverCNIC.Text);
                 SqlDataAdapter SDA = new SqlDataAdapter(command);
                 DataTable DT = new DataTable();
                 SDA.Fill(DT);
@@ -37,9 +37,8 @@ namespace TransportManagementSystemFYP
                 {
                     try
                     {
-                        String Query = "INSERT into Driver(DriverID,Name,City,Address,PhoneNumber,CNIC,LicenceNumber,Status) values(@driverId,@name,@city,@address,@number,@cnic,@LN,@status)";
+                        String Query = "INSERT into Driver(Name,City,Address,PhoneNumber,CNIC,LicenceNumber,Status) values(@name,@city,@address,@number,@cnic,@LN,@status)";
                         SqlCommand sqlCommand = new SqlCommand(Query, conn);
-                        sqlCommand.Parameters.AddWithValue("@driverId",DriverID.Text);
                         sqlCommand.Parameters.AddWithValue("@name", DriverName.Text);
                         sqlCommand.Parameters.AddWithValue("@city", DriverCity.Text);
                         sqlCommand.Parameters.AddWithValue("@address", DriverAddress.Text);

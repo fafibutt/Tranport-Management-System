@@ -35,10 +35,9 @@ namespace TransportManagementSystemFYP
             {
                 try
                 {
-                    String query = "SELECT * from Driver where (DriverID = @driverId) OR (Name LIKE '%' + @DriverName + '%')";
+                    String query = "SELECT * from Driver where (DriverID LIKE '%' + @search + '%') OR (Name LIKE '%' + @search + '%') AND Status = 'Active'";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@driverId", SearchTextBox.Text);
-                    cmd.Parameters.AddWithValue("@DriverName", SearchTextBox.Text);
+                    cmd.Parameters.AddWithValue("@search", SearchTextBox.Text);
                     conn.Open();
                     SqlDataReader SDR = cmd.ExecuteReader();
                     DataTable DT = new DataTable();

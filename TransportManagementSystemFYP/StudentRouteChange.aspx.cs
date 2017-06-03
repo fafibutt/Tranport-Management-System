@@ -13,5 +13,10 @@ namespace TransportManagementSystemFYP
         {
 
         }
+
+        protected void LoadRouteDetail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -23,10 +23,9 @@ namespace TransportManagementSystemFYP
             String BDstring = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(BDstring))
             {
-                String query = "SELECT * from Route where (RouteID = @routeId) OR (Name LIKE '%' + @RouteName + '%')";
+                String query = "SELECT * from Route where (RouteID LIKE '%'+ @search + '%') OR (Name LIKE '%' + @search + '%')";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@routeId", SearchTextBox.Text);
-                cmd.Parameters.AddWithValue("@RouteName", SearchTextBox.Text);
+                cmd.Parameters.AddWithValue("@search", SearchTextBox.Text);
                 conn.Open();
                 SqlDataReader SDR = cmd.ExecuteReader();
                 DataTable DT = new DataTable();

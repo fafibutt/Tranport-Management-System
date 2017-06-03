@@ -7,25 +7,20 @@
                 <div class="col-md-12 contact-grid agileinfo-5">
                     <label>University ID</label>
                     <asp:TextBox ID="UniID" placeholder="University ID..." required="" runat="server"></asp:TextBox>
-                    <asp:Button ID="LoadRouteDetail" type="submit" runat="server" Text="Route Detail" />
+                    <asp:Button ID="LoadRouteDetail" type="submit" runat="server" Text="Route Detail" OnClick="LoadRouteDetail_Click" />
                     <br/>                 
                 </div>
-                
-                <div class="col-md-4 contact-grid agileinfo-5">
-                    <asp:TextBox ID="City" runat="server"></asp:TextBox>
-                </div>
-                <div class="col-md-4 contact-grid agileinfo-5">
-                    <asp:TextBox ID="Rote" runat="server"></asp:TextBox>
-                </div>
-                <div class="col-md-4 contact-grid agileinfo-5">
-                    <asp:TextBox ID="Stop" runat="server"></asp:TextBox>
+                <div class="col-lg-12 contact-grid agileinfo-5">
+                    <asp:GridView ID="GridView" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
+                             HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" >
+                        </asp:GridView>
                 </div>
                 <div class="col-lg-12 contact-grid agileinfo-5">
-                    <label>City</label>
-                    <asp:DropDownList ID="StudentCity" CssClass="form-control" runat="server"></asp:DropDownList>
-                    <label>Route</label>
-                    <asp:DropDownList ID="StudentRoute" CssClass="form-control" runat="server"></asp:DropDownList>
-                    <label>Stop</label>
+                    <label>Select City</label>
+                    <asp:DropDownList ID="StudentCity" CssClass="form-control" AutoPostBack="true" runat="server"></asp:DropDownList>
+                    <label>Select Route</label>
+                    <asp:DropDownList ID="StudentRoute" CssClass="form-control" AutoPostBack="true" runat="server"></asp:DropDownList>
+                    <label>Select Stop</label>
                     <asp:DropDownList ID="StudentStop" CssClass="form-control" runat="server"></asp:DropDownList>
                     <asp:Button ID="RouteChange" type="submit" runat="server" Text="Change Route" />
                 </div>

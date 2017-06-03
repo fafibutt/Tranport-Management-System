@@ -10,33 +10,24 @@
 namespace TransportManagementSystemFYP {
     
     
-    public partial class StudentComplaint {
+    public partial class ViewRoute {
         
         /// <summary>
-        /// UniID control.
+        /// GridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UniID;
+        protected global::System.Web.UI.WebControls.GridView GridView;
         
         /// <summary>
-        /// StudentComplaintRegistration control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentComplaintRegistration;
-        
-        /// <summary>
-        /// RegisterComplaint control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterComplaint;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

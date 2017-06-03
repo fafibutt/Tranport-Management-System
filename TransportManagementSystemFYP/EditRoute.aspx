@@ -9,8 +9,9 @@
                         <asp:Button ID="BtnSearchRoute" CssClass="btn pull-right" runat="server" Text="Search Route" OnClick="BtnSearchRoute_Click" />
                     </div>
                     <div class="clearfix"></div>
+                    <br />
                     <div class="col-md-12 contact-grid agileinfo-5">
-                        <asp:GridView ID="GridView" AutoGenerateSelectButton="true"
+                        <asp:GridView ID="GridView" AutoGenerateSelectButton="true" 
                              OnSelectedIndexChanged="GridView_SelectedIndexChanged"
                               runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager"
                              HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AllowPaging="True" >

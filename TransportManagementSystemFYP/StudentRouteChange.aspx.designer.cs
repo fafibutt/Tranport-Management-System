@@ -31,31 +31,13 @@ namespace TransportManagementSystemFYP {
         protected global::System.Web.UI.WebControls.Button LoadRouteDetail;
         
         /// <summary>
-        /// City control.
+        /// GridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox City;
-        
-        /// <summary>
-        /// Rote control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Rote;
-        
-        /// <summary>
-        /// Stop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Stop;
+        protected global::System.Web.UI.WebControls.GridView GridView;
         
         /// <summary>
         /// StudentCity control.

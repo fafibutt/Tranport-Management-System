@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AssignDriverToVehicle.aspx" />
+    <Content Include="AssignRouteToVehicle.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\form-elements.css" />
@@ -66,11 +68,12 @@
     <Content Include="css\style2.css" />
     <Content Include="DeleteDriver.aspx" />
     <Content Include="DeleteRoute.aspx" />
+    <Content Include="DeleteStop.aspx" />
     <Content Include="DeleteVehicle.aspx" />
     <Content Include="EditDriver.aspx" />
     <Content Include="EditRoute.aspx" />
+    <Content Include="EditStop.aspx" />
     <Content Include="EditVehicle.aspx" />
-    <Content Include="js\bars.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
@@ -92,9 +95,27 @@
     <Content Include="StudentRegistrationView.aspx" />
     <Content Include="StudentRouteChange.aspx" />
     <Content Include="TransportManagerHome.aspx" />
+    <Content Include="ViewDriver.aspx" />
+    <Content Include="ViewRoute.aspx" />
+    <Content Include="ViewStop.aspx" />
+    <Content Include="ViewVehicle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssignDriverToVehicle.aspx.cs">
+      <DependentUpon>AssignDriverToVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignDriverToVehicle.aspx.designer.cs">
+      <DependentUpon>AssignDriverToVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignRouteToVehicle.aspx.cs">
+      <DependentUpon>AssignRouteToVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignRouteToVehicle.aspx.designer.cs">
+      <DependentUpon>AssignRouteToVehicle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DeleteDriver.aspx.cs">
       <DependentUpon>DeleteDriver.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,6 +129,13 @@
     </Compile>
     <Compile Include="DeleteRoute.aspx.designer.cs">
       <DependentUpon>DeleteRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStop.aspx.cs">
+      <DependentUpon>DeleteStop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteStop.aspx.designer.cs">
+      <DependentUpon>DeleteStop.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeleteVehicle.aspx.cs">
       <DependentUpon>DeleteVehicle.aspx</DependentUpon>
@@ -129,6 +157,13 @@
     </Compile>
     <Compile Include="EditRoute.aspx.designer.cs">
       <DependentUpon>EditRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditStop.aspx.cs">
+      <DependentUpon>EditStop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditStop.aspx.designer.cs">
+      <DependentUpon>EditStop.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditVehicle.aspx.cs">
       <DependentUpon>EditVehicle.aspx</DependentUpon>
@@ -243,6 +278,34 @@
     <Compile Include="TransportManagerHome.aspx.designer.cs">
       <DependentUpon>TransportManagerHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewDriver.aspx.cs">
+      <DependentUpon>ViewDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDriver.aspx.designer.cs">
+      <DependentUpon>ViewDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRoute.aspx.cs">
+      <DependentUpon>ViewRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRoute.aspx.designer.cs">
+      <DependentUpon>ViewRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStop.aspx.cs">
+      <DependentUpon>ViewStop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStop.aspx.designer.cs">
+      <DependentUpon>ViewStop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewVehicle.aspx.cs">
+      <DependentUpon>ViewVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewVehicle.aspx.designer.cs">
+      <DependentUpon>ViewVehicle.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="TransportManager.Master" />
@@ -258,7 +321,6 @@
     <Content Include="Student.Master" />
     <Content Include="fonts\Asap-Regular.ttf" />
     <Content Include="fonts\Audiowide-Regular.ttf" />
-    <Content Include="scss\style.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

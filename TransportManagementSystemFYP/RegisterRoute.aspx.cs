@@ -12,6 +12,7 @@ namespace TransportManagementSystemFYP
 {
     public partial class RegisterRoute : System.Web.UI.Page
     {
+        String DBString = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,38 +23,22 @@ namespace TransportManagementSystemFYP
 
         protected void RouteRegistration_Click(object sender, EventArgs e)
         {
-            String DBString = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(DBString))
-            {              
-                String query = "select RouteID,Name from Route where RouteID =@routeId and Name = @name";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@routeId", RouteID.Text);
-                command.Parameters.AddWithValue("@name",RouteName.Text);
-                SqlDataAdapter SDA = new SqlDataAdapter(command);
-                DataTable DT = new DataTable();
-                SDA.Fill(DT);
-                if (DT.Rows.Count != 1)
+            {
+                try
                 {
-                    try
-                    {
-                        String Query = "INSERT into Route(RouteID,Name,City,Road) values(@routeId,@name,@city,@road)";
-                        SqlCommand sqlCommand = new SqlCommand(Query, conn);
-                        sqlCommand.Parameters.AddWithValue("@routeId", RouteID.Text);
-                        sqlCommand.Parameters.AddWithValue("@name", RouteName.Text);
-                        sqlCommand.Parameters.AddWithValue("@city", RouteCity.Text);
-                        sqlCommand.Parameters.AddWithValue("@road", RouteRoad.Text);
-                        conn.Open();
-                        sqlCommand.ExecuteNonQuery();
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
-                    }
-                    catch (SqlException sqlExce)
-                    {
-                        throw sqlExce;
-                    }
+                    String Query = "if not exists(select * from Route R where R.City = @city and R.Name = @name) INSERT into Route(Name,City,Road) values(@name,@city,@road)";
+                    SqlCommand sqlCommand = new SqlCommand(Query, conn);
+                    sqlCommand.Parameters.AddWithValue("@name", RouteName.Text);
+                    sqlCommand.Parameters.AddWithValue("@city", RouteCity.Text);
+                    sqlCommand.Parameters.AddWithValue("@road", RouteRoad.Text);
+                    conn.Open();
+                    sqlCommand.ExecuteNonQuery();
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
                 }
-                else
+                catch (SqlException sqlExce)
                 {
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data already exist')");
+                    throw sqlExce;
                 }
             }
         }

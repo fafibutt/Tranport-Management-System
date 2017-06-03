@@ -7,6 +7,6 @@ c:\users\fahad\documents\visual studio 2013\Projects\TransportManagementSystemFY
 C:\Users\fahad\Documents\GitProjects\TransportManagementSystemFYP\TransportManagementSystemFYP\bin\TransportManagementSystemFYP.dll.config
 C:\Users\fahad\Documents\GitProjects\TransportManagementSystemFYP\TransportManagementSystemFYP\bin\TransportManagementSystemFYP.dll
 C:\Users\fahad\Documents\GitProjects\TransportManagementSystemFYP\TransportManagementSystemFYP\bin\TransportManagementSystemFYP.pdb
-C:\Users\fahad\Documents\GitProjects\TransportManagementSystemFYP\TransportManagementSystemFYP\obj\Debug\TransportManagementSystemFYP.csprojResolveAssemblyReference.cache
 C:\Users\fahad\Documents\GitProjects\TransportManagementSystemFYP\TransportManagementSystemFYP\obj\Debug\TransportManagementSystemFYP.dll
 C:\Users\fahad\Documents\GitProjects\TransportManagementSystemFYP\TransportManagementSystemFYP\obj\Debug\TransportManagementSystemFYP.pdb
+C:\Users\fahad\Documents\GitProjects\TransportManagementSystemFYP\TransportManagementSystemFYP\obj\Debug\TransportManagementSystemFYP.csprojResolveAssemblyReference.cache

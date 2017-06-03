@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Registration" Language="C#" MasterPageFile="~/Student.Master" AutoEventWireup="true" CodeBehind="StudentRegistration.aspx.cs" Inherits="TransportManagementSystemFYP.StudentRegistration" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="contact w3l-2">
+    <div class="contact w3l-2">
         <div class="container">
             <h2 class="w3ls_head">Transportation <span>Registration</span></h2>
             <div class="contact-grids">
@@ -16,12 +17,15 @@
                     <label>Number</label>
                     <asp:TextBox ID="StudentNumber" placeholder="Your number..." required="" runat="server"></asp:TextBox>
                     <label>City</label>
-                    <asp:DropDownList ID="StudentCity" CssClass="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="StudentCity" CssClass="form-control" runat="server" AutoPostBack="true" OnSelectedIndexChanged="StudentCity_SelectedIndexChanged">
+                    </asp:DropDownList>
                     <label>Route</label>
-                    <asp:DropDownList ID="StudentRoute" CssClass="form-control" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="StudentRoute" CssClass="form-control" runat="server" AutoPostBack="true" OnSelectedIndexChanged="StudentRoute_SelectedIndexChanged">
+                    </asp:DropDownList>
                     <label>Stop</label>
-                    <asp:DropDownList ID="StudentStop" CssClass="form-control" runat="server"></asp:DropDownList>
-                    <asp:Button ID="RegistrationStudent" type="submit" runat="server" Text="Register" />
+                    <asp:DropDownList ID="StudentStop" CssClass="form-control" runat="server">
+                    </asp:DropDownList>
+                    <asp:Button ID="RegistrationStudent" type="submit" runat="server" Text="Register" OnClick="RegistrationStudent_Click" />
 
                 </div>
 
