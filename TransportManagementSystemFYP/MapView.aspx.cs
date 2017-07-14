@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace TransportManagementSystemFYP
 {
-    public partial class StudentCancelRegistration : System.Web.UI.Page
+    public partial class MapView : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+         
         }
     }
 }

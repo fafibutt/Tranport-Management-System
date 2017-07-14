@@ -8,11 +8,14 @@
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/skdslider.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/sweetalert.css" rel="stylesheet" />
     <script src="js/bars.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/numscroller-1.0.js"></script>
     <script src="js/skdslider.min.js"></script>
+    <script src="js/sweetalert-dev.js"></script>
+    
     <!--fonts-->
     <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet" />
     <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
@@ -56,8 +59,10 @@
                         </div>
                         <div class="agileits-contact-info text-right">
                             <ul>
-                                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>13140013@gift.edu.pk</li>
-                                <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>03045527334</li>
+                                
+                                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><asp:Label ID="UserId" runat="server" Text=""></asp:Label></li>
+                                <li><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                    <asp:LinkButton ID="BtnLogout" type="submit" OnClick="BtnLogout_Click" runat="server">Logout</asp:LinkButton></li>
                             </ul>
                         </div>
 
@@ -84,10 +89,12 @@
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Register Student</a></li>
-                                        <li><a href="#">Update Student </a></li>
-                                        <li><a href="#">Delete Student </a></li>
-                                        <li><a href="#">View Student</a></li>
+                                        <li><a href="RegisterStudent.aspx">Register Student</a></li>
+                                        <li><a href="EditStudent.aspx">Update Student </a></li>
+                                        <li><a href="DeleteStudent.aspx">Delete Student </a></li>
+                                        <li><a href="ViewStudent.aspx">View Student</a></li>
+                                        <li><a href="Complaints.aspx">Student Complaint</a></li>
+                                        <li><a href="ChangeRouteRequest.aspx">Change Route Request</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -97,6 +104,7 @@
                                         <li><a href="EditDriver.aspx">Update Driver</a></li>
                                         <li><a href="DeleteDriver.aspx">Delete Driver</a></li>
                                         <li><a href="ViewDriver.aspx">View Driver</a></li>
+                                        <li><a href="ChangeDriverVehicle.aspx">Change Vehicle</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -121,15 +129,10 @@
                                         <li><a href="EditStop.aspx">Update Stop</a></li>
                                         <li><a href="DeleteStop.aspx">Delete Stop</a></li>
                                         <li><a href="ViewStop.aspx">View Stop</a></li>
+                                        <li><a href="ChangeRouteVehicle.aspx">Change Vehicle</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Registration</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Vehicle Fleet Map</a></li>
+                                <li><a href="MapView.aspx">Vehicle Fleet Map</a></li>
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->

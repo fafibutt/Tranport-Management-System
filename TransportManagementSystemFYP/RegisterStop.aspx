@@ -1,5 +1,18 @@
 ﻿<%@ Page Title="Register Stop" Language="C#" MasterPageFile="~/TransportManager.Master" ViewStateMode="Enabled" AutoEventWireup="true" CodeBehind="RegisterStop.aspx.cs" Inherits="TransportManagementSystemFYP.RegisterStop" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        function massege() {
+            swal({
+                title: 'Congratulation!',
+                text: 'Your Data has been saved',
+                type: 'success',
+                confirmButtonText: 'ok'
+            },
+            function () {
+                window.location.href = 'RegisterStop.aspx';
+            });
+        }
+    </script>
     <div class="contact w3l-2">
 		<div class="container">
 			<h2 class="w3ls_head">Stop <span>Registration</span></h2>

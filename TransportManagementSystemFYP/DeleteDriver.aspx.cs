@@ -12,21 +12,22 @@ namespace TransportManagementSystemFYP
 {
     public partial class DeleteDriver : System.Web.UI.Page
     {
+        String DbString = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
         protected void BtnSearchDriver_Click(object sender, EventArgs e)
         {
-            String Status = "Active";
-            String BDstring = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(BDstring))
+
+
+            using (SqlConnection conn = new SqlConnection(DbString))
             {
                 try
                 {
-                    String query = "SELECT * FROM Driver d WHERE (d.Name LIKE @search OR d.DriverID LIKE @search) AND d.Status = 'Active'";
+                    String query = "SELECT * from Driver where (DriverID LIKE '%' + @search + '%') OR (Name LIKE '%' + @search + '%') AND Status = 'Active'";
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@search","%" + SearchTextBox.Text + "%");
+                    cmd.Parameters.AddWithValue("@search", SearchTextBox.Text);
                     conn.Open();
                     SqlDataReader SDR = cmd.ExecuteReader();
                     DataTable DT = new DataTable();
@@ -41,13 +42,13 @@ namespace TransportManagementSystemFYP
                 {
                     throw exe;
                 }
+
             }
         }
         protected void GridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             String id = GridView.DataKeys[e.RowIndex].Values[0].ToString();
-            String BDstring = ConfigurationManager.ConnectionStrings["CS"].ConnectionString;
-            using (SqlConnection conn = new SqlConnection(BDstring))
+            using (SqlConnection conn = new SqlConnection(DbString))
             {
                 try
                 {
@@ -56,6 +57,7 @@ namespace TransportManagementSystemFYP
                     cmd.Parameters.AddWithValue("@driverId", id);
                     conn.Open();
                     cmd.ExecuteNonQuery();
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
                 catch (SqlException exe)
                 {
@@ -63,15 +65,5 @@ namespace TransportManagementSystemFYP
                 }
             }
         }
-
-        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != GridView.EditIndex)
-            {
-                (e.Row.Cells[0].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to delete this row?');";
-            }
-        }
-
-        
     }
 }

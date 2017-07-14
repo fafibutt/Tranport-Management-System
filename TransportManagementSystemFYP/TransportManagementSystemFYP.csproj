@@ -38,7 +38,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="JsonServices, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>JSON Services\JsonServices.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonServices.Web, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>JSON Services\JsonServices.Web.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>JSON Services\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,51 +69,81 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AndroidHandlerClasses\AndroidService.asmx" />
     <Content Include="AssignDriverToVehicle.aspx" />
     <Content Include="AssignRouteToVehicle.aspx" />
+    <Content Include="ChangeDriverVehicle.aspx" />
+    <Content Include="ChangeRouteRequest.aspx" />
+    <Content Include="ChangeRouteVehicle.aspx" />
+    <Content Include="Complaints.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\Login\font-awesomeLogin.css" />
     <Content Include="css\form-elements.css" />
+    <Content Include="css\Login\LoginStyle.css" />
     <Content Include="css\normalize.min.css" />
     <Content Include="css\skdslider.css" />
     <Content Include="css\style.css" />
-    <Content Include="css\style2.css" />
     <Content Include="DeleteDriver.aspx" />
     <Content Include="DeleteRoute.aspx" />
     <Content Include="DeleteStop.aspx" />
+    <Content Include="DeleteStudent.aspx" />
     <Content Include="DeleteVehicle.aspx" />
     <Content Include="EditDriver.aspx" />
     <Content Include="EditRoute.aspx" />
     <Content Include="EditStop.aspx" />
+    <Content Include="EditStudent.aspx" />
     <Content Include="EditVehicle.aspx" />
+    <Content Include="fonts\login\fontawesome-webfont.svg" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\bus.jpg" />
+    <Content Include="images\color1.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="JSON Services\JsonServices.dll" />
+    <Content Include="JSON Services\JsonServices.Web.dll" />
+    <Content Include="JSON Services\Newtonsoft.Json.dll" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\index.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="js\jquery.backstretch.min.js" />
-    <Content Include="js\Loginjquery.min.js" />
+    <Content Include="js\Login\jquery-2.1.4.min.js" />
+    <Content Include="js\Login\jquery.vide.min.js" />
     <Content Include="js\numscroller-1.0.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\skdslider.min.js" />
-    <Content Include="Login.aspx" />
+    <Content Include="MapView.aspx" />
+    <Content Include="css\popup.css" />
+    <Content Include="Register.aspx" />
     <Content Include="RegisterDriver.aspx" />
     <Content Include="RegisterRoute.aspx" />
     <Content Include="RegisterStop.aspx" />
+    <Content Include="RegisterStudent.aspx" />
     <Content Include="RegisterVehicle.aspx" />
-    <Content Include="StudentCancelRegistration.aspx" />
     <Content Include="StudentComplaint.aspx" />
+    <Content Include="StudentComplaintDecision.aspx" />
+    <Content Include="StudentDeleteRegistration.aspx" />
     <Content Include="StudentHome.aspx" />
     <Content Include="StudentRegistration.aspx" />
-    <Content Include="StudentRegistrationEdit.aspx" />
     <Content Include="StudentRegistrationView.aspx" />
     <Content Include="StudentRouteChange.aspx" />
+    <Content Include="StudentUpdateRegistration.aspx" />
     <Content Include="TransportManagerHome.aspx" />
     <Content Include="ViewDriver.aspx" />
     <Content Include="ViewRoute.aspx" />
     <Content Include="ViewStop.aspx" />
+    <Content Include="ViewStudent.aspx" />
     <Content Include="ViewVehicle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AndroidHandlerClasses\AndroidService.asmx.cs">
+      <DependentUpon>AndroidService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AndroidHandlerClasses\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AndroidHandlerClasses\Login.cs" />
     <Compile Include="AssignDriverToVehicle.aspx.cs">
       <DependentUpon>AssignDriverToVehicle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +157,34 @@
     </Compile>
     <Compile Include="AssignRouteToVehicle.aspx.designer.cs">
       <DependentUpon>AssignRouteToVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeDriverVehicle.aspx.cs">
+      <DependentUpon>ChangeDriverVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeDriverVehicle.aspx.designer.cs">
+      <DependentUpon>ChangeDriverVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeRouteRequest.aspx.cs">
+      <DependentUpon>ChangeRouteRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeRouteRequest.aspx.designer.cs">
+      <DependentUpon>ChangeRouteRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeRouteVehicle.aspx.cs">
+      <DependentUpon>ChangeRouteVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeRouteVehicle.aspx.designer.cs">
+      <DependentUpon>ChangeRouteVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Complaints.aspx.cs">
+      <DependentUpon>Complaints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Complaints.aspx.designer.cs">
+      <DependentUpon>Complaints.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeleteDriver.aspx.cs">
       <DependentUpon>DeleteDriver.aspx</DependentUpon>
@@ -136,6 +206,13 @@
     </Compile>
     <Compile Include="DeleteStop.aspx.designer.cs">
       <DependentUpon>DeleteStop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStudent.aspx.cs">
+      <DependentUpon>DeleteStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteStudent.aspx.designer.cs">
+      <DependentUpon>DeleteStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="DeleteVehicle.aspx.cs">
       <DependentUpon>DeleteVehicle.aspx</DependentUpon>
@@ -165,6 +242,13 @@
     <Compile Include="EditStop.aspx.designer.cs">
       <DependentUpon>EditStop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditStudent.aspx.cs">
+      <DependentUpon>EditStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditStudent.aspx.designer.cs">
+      <DependentUpon>EditStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditVehicle.aspx.cs">
       <DependentUpon>EditVehicle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,14 +256,28 @@
     <Compile Include="EditVehicle.aspx.designer.cs">
       <DependentUpon>EditVehicle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MapView.aspx.cs">
+      <DependentUpon>MapView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MapView.aspx.designer.cs">
+      <DependentUpon>MapView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterDriver.aspx.cs">
       <DependentUpon>RegisterDriver.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +299,13 @@
     <Compile Include="RegisterStop.aspx.designer.cs">
       <DependentUpon>RegisterStop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RegisterStudent.aspx.cs">
+      <DependentUpon>RegisterStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterStudent.aspx.designer.cs">
+      <DependentUpon>RegisterStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegisterVehicle.aspx.cs">
       <DependentUpon>RegisterVehicle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -215,19 +320,26 @@
     <Compile Include="Student.Master.designer.cs">
       <DependentUpon>Student.Master</DependentUpon>
     </Compile>
-    <Compile Include="StudentCancelRegistration.aspx.cs">
-      <DependentUpon>StudentCancelRegistration.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StudentCancelRegistration.aspx.designer.cs">
-      <DependentUpon>StudentCancelRegistration.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StudentComplaint.aspx.cs">
       <DependentUpon>StudentComplaint.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StudentComplaint.aspx.designer.cs">
       <DependentUpon>StudentComplaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentComplaintDecision.aspx.cs">
+      <DependentUpon>StudentComplaintDecision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentComplaintDecision.aspx.designer.cs">
+      <DependentUpon>StudentComplaintDecision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDeleteRegistration.aspx.cs">
+      <DependentUpon>StudentDeleteRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentDeleteRegistration.aspx.designer.cs">
+      <DependentUpon>StudentDeleteRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentHome.aspx.cs">
       <DependentUpon>StudentHome.aspx</DependentUpon>
@@ -243,13 +355,6 @@
     <Compile Include="StudentRegistration.aspx.designer.cs">
       <DependentUpon>StudentRegistration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StudentRegistrationEdit.aspx.cs">
-      <DependentUpon>StudentRegistrationEdit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StudentRegistrationEdit.aspx.designer.cs">
-      <DependentUpon>StudentRegistrationEdit.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StudentRegistrationView.aspx.cs">
       <DependentUpon>StudentRegistrationView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -263,6 +368,13 @@
     </Compile>
     <Compile Include="StudentRouteChange.aspx.designer.cs">
       <DependentUpon>StudentRouteChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentUpdateRegistration.aspx.cs">
+      <DependentUpon>StudentUpdateRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentUpdateRegistration.aspx.designer.cs">
+      <DependentUpon>StudentUpdateRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="TransportManager.Master.cs">
       <DependentUpon>TransportManager.Master</DependentUpon>
@@ -299,6 +411,13 @@
     <Compile Include="ViewStop.aspx.designer.cs">
       <DependentUpon>ViewStop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ViewStudent.aspx.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewStudent.aspx.designer.cs">
+      <DependentUpon>ViewStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewVehicle.aspx.cs">
       <DependentUpon>ViewVehicle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,6 +440,14 @@
     <Content Include="Student.Master" />
     <Content Include="fonts\Asap-Regular.ttf" />
     <Content Include="fonts\Audiowide-Regular.ttf" />
+    <Content Include="packages.config" />
+    <Content Include="AndroidHandlerClasses\Handler.ashx" />
+    <Content Include="fonts\login\fontawesome-webfont.eot" />
+    <Content Include="fonts\login\fontawesome-webfont.ttf" />
+    <Content Include="fonts\login\fontawesome-webfont.woff" />
+    <Content Include="fonts\login\fontawesome-webfont.woff2" />
+    <Content Include="fonts\login\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\TMS.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -328,9 +455,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

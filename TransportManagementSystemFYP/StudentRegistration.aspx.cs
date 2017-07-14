@@ -138,7 +138,8 @@ namespace TransportManagementSystemFYP
                         sqlCommand.Parameters.AddWithValue("@stop", StudentStop.SelectedItem.Text);
                         conn.Open();
                         sqlCommand.ExecuteNonQuery();
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
+                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "confirm('Student register successfully')");
+                        Response.Redirect(Request.Url.AbsoluteUri);
                     }
                     catch (SqlException sqlExce)
                     {
@@ -147,7 +148,8 @@ namespace TransportManagementSystemFYP
                 }
                 else
                 {
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data already exist')");
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "confirm('Student already exist')");
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
             }
         }  

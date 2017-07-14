@@ -1,5 +1,18 @@
 ﻿<%@ Page Title="RegisterRoute" Language="C#" MasterPageFile="~/TransportManager.Master" AutoEventWireup="true" CodeBehind="RegisterRoute.aspx.cs" Inherits="TransportManagementSystemFYP.RegisterRoute" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        function massege() {
+            swal({
+                title: 'Congratulation!',
+                text: 'Your Data has been saved',
+                type: 'success',
+                confirmButtonText: 'ok'
+            },
+            function(){
+                window.location.href = 'RegisterRoute.aspx';
+            });
+        }
+    </script>
     <div class="contact w3l-2">
 		<div class="container">
 			<h2 class="w3ls_head">Route <span>Registration</span></h2>

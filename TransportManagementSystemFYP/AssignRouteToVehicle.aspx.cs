@@ -65,7 +65,8 @@ namespace TransportManagementSystemFYP
                 cmd.Parameters.AddWithValue("@routeName", RouteDropDown.SelectedItem.Text);
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Driver assignment successfully')");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "confirm('Assignment complete')");
+                Response.Redirect(Request.Url.AbsoluteUri);
             }
         }
     }

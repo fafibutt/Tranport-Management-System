@@ -28,7 +28,8 @@ namespace TransportManagementSystemFYP
                 cmd.Parameters.AddWithValue("@complaint", StudentComplaintRegistration.Text);
                 con.Open();
                 cmd.ExecuteNonQuery();
-                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "confirm(Complaint register successfully)");
+                Response.Redirect(Request.Url.AbsoluteUri);
             }
         }
 

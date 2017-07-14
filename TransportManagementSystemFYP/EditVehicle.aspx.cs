@@ -87,7 +87,8 @@ namespace TransportManagementSystemFYP
                     cmd.Parameters.AddWithValue("@status", VehicleStatus.Text);
                     conn.Open();
                     cmd.ExecuteNonQuery();
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data update successfully')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "Success", "confirm('Vehicle Update Sccessfully'");
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
                 catch (SqlException exe)
                 {

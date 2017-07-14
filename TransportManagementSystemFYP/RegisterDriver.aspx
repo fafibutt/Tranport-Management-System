@@ -1,5 +1,18 @@
 ﻿<%@ Page Title="Register Driver" Language="C#" MasterPageFile="~/TransportManager.Master" AutoEventWireup="true" CodeBehind="RegisterDriver.aspx.cs" Inherits="TransportManagementSystemFYP.RegisterDriver" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script type="text/javascript">
+        function massege() {
+            swal({
+                title: 'Congratulation!',
+                text: 'Your Data has been saved',
+                type: 'success',
+                confirmButtonText: 'ok'
+            },
+            function(){
+                window.location.href = 'RegisterDriver.aspx';
+            });
+        }
+    </script>
     <div class="contact w3l-2">
         <div class="container">
             <h2 class="w3ls_head">Driver <span>Registration</span></h2>

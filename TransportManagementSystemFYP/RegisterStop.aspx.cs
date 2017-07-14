@@ -85,7 +85,8 @@ namespace TransportManagementSystemFYP
                             cmd.Parameters.AddWithValue("@routeId", item.Cells[2].Text);
                             con.Open();
                             cmd.ExecuteNonQuery();
-                            ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
+                            ClientScript.RegisterStartupScript(this.GetType(), "Success", "confirm('Route register successfully')");
+                            Response.Redirect(Request.Url.AbsoluteUri);
                         }
                     }
                 }

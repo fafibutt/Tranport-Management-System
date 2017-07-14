@@ -44,7 +44,8 @@ namespace TransportManagementSystemFYP
                         cmd.Parameters.AddWithValue("@status", Status);
                         conn.Open();
                         cmd.ExecuteNonQuery();
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
+                        ClientScript.RegisterStartupScript(this.GetType(), "Success", "confirm('Vehicle register successfully')");
+                        Response.Redirect(Request.Url.AbsoluteUri);
                     }
                     catch (SqlException exe)
                     {
@@ -53,7 +54,8 @@ namespace TransportManagementSystemFYP
                 }
                 else
                 {
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data already exist')");
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "confirm('Vehicle register successfully')");
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
             }
         }

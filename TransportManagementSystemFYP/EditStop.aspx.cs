@@ -76,7 +76,8 @@ namespace TransportManagementSystemFYP
                     cmd.Parameters.AddWithValue("@route", StopRoute.Text);
                     conn.Open();
                     cmd.ExecuteNonQuery();
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data update successfully')");
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "confirm('Data update successfully')");
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
                 catch (SqlException exe)
                 {

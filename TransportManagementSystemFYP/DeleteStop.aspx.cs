@@ -55,18 +55,12 @@ namespace TransportManagementSystemFYP
                     cmd.Parameters.AddWithValue("@stopId", id);
                     conn.Open();
                     cmd.ExecuteNonQuery();
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
                 catch (SqlException exe)
                 {
                     throw exe;
                 }
-            }
-        }
-        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != GridView.EditIndex)
-            {
-                (e.Row.Cells[0].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to delete this row?');";
             }
         }
     }

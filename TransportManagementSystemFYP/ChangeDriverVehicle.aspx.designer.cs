@@ -10,96 +10,69 @@
 namespace TransportManagementSystemFYP {
     
     
-    public partial class StudentRegistrationEdit {
+    public partial class ChangeDriverVehicle {
         
         /// <summary>
-        /// UniID control.
+        /// SearchTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UniID;
+        protected global::System.Web.UI.WebControls.TextBox SearchTextBox;
         
         /// <summary>
-        /// StudentName control.
+        /// BtnSearchDriver control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentName;
+        protected global::System.Web.UI.WebControls.Button BtnSearchDriver;
         
         /// <summary>
-        /// StudentCNIC control.
+        /// GridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentCNIC;
+        protected global::System.Web.UI.WebControls.GridView GridView;
         
         /// <summary>
-        /// StudentCity control.
+        /// DriverId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentCity;
+        protected global::System.Web.UI.WebControls.TextBox DriverId;
         
         /// <summary>
-        /// StudentAddress control.
+        /// DriverName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentAddress;
+        protected global::System.Web.UI.WebControls.TextBox DriverName;
         
         /// <summary>
-        /// StudentNumber control.
+        /// VehicleDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StudentNumber;
+        protected global::System.Web.UI.WebControls.DropDownList VehicleDropDown;
         
         /// <summary>
-        /// StudentRoute control.
+        /// UpdateVehicle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList StudentRoute;
-        
-        /// <summary>
-        /// StudentStop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList StudentStop;
-        
-        /// <summary>
-        /// UpadteRegistration control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpadteRegistration;
-        
-        /// <summary>
-        /// CancelUpadte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CancelUpadte;
+        protected global::System.Web.UI.WebControls.Button UpdateVehicle;
     }
 }

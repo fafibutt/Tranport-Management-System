@@ -27,14 +27,15 @@ namespace TransportManagementSystemFYP
             {
                 try
                 {
-                    String Query = "if not exists(select * from Route R where R.City = @city and R.Name = @name) INSERT into Route(Name,City,Road) values(@name,@city,@road)";
+                    String Query = "if not exists(Select * from Route) INSERT into Route(Name,City,Road) values(@name,@city,@road)";
                     SqlCommand sqlCommand = new SqlCommand(Query, conn);
                     sqlCommand.Parameters.AddWithValue("@name", RouteName.Text);
                     sqlCommand.Parameters.AddWithValue("@city", RouteCity.Text);
                     sqlCommand.Parameters.AddWithValue("@road", RouteRoad.Text);
                     conn.Open();
                     sqlCommand.ExecuteNonQuery();
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
+                    ClientScript.RegisterStartupScript(this.GetType(), "Success", "confirm('Route register successfully')");
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
                 catch (SqlException sqlExce)
                 {

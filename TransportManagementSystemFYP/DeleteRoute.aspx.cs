@@ -46,11 +46,12 @@ namespace TransportManagementSystemFYP
             {
                 try
                 {
-                    String query = "DELETE from Route where RouteID = @routeId";
+                    String query = "DELETE from Route where RouteID = @routeId ";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@routeId", id);
                     conn.Open();
                     cmd.ExecuteNonQuery();
+                    Response.Redirect(Request.Url.AbsoluteUri);
                 }
                 catch (SqlException exe)
                 {
@@ -58,14 +59,6 @@ namespace TransportManagementSystemFYP
                 }
             }
       
-        }
-
-        protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.RowType == DataControlRowType.DataRow && e.Row.RowIndex != GridView.EditIndex)
-            {
-                (e.Row.Cells[0].Controls[0] as LinkButton).Attributes["onclick"] = "return confirm('Do you want to delete this row?');";
-            }
         }
     }
 }

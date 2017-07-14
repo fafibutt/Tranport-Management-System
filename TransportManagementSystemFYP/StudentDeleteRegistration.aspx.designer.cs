@@ -10,33 +10,24 @@
 namespace TransportManagementSystemFYP {
     
     
-    public partial class StudentCancelRegistration {
+    public partial class StudentDeleteRegistration {
         
         /// <summary>
-        /// UniID control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UniID;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
-        /// CancelRegistration control.
+        /// GridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CancelRegistration;
-        
-        /// <summary>
-        /// CancelRequest control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CancelRequest;
+        protected global::System.Web.UI.WebControls.GridView GridView;
     }
 }

@@ -40,10 +40,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .mydatagrid {
     width: 100%;
-    border: solid 2px black;
+    border: solid 1px black;
     min-width: 80%;
 }
+.mydatagrid label text {
 
+}
 .header {
     background-color: #000;
     font-family: Arial;
@@ -53,12 +55,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
 }
 .rows {
-    background-color: #fff;
+    background-color: white;
     font-family: Arial;
     font-size: 14px;
-    color: #000;
+    color:black;
     min-height: 25px;
-    text-align: left;
+    text-align: center;
 }
 .rows:hover {
     background-color: #22c81a;
@@ -79,8 +81,8 @@ h1, h2, h3, h4, h5, h6 {
 .mydatagrid span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/
 {
     padding: 5px 5px 5px 5px;
-    background-color: #000;
-    color: #fff;
+    background-color: white;
+    color: #000;
 }
 .pager{
     background-color: #22c81a;
@@ -89,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 30px;
     text-align: left;
 }
-.mydatagrid td 62 {
+.mydatagrid td {
    padding: 5px;
 }
 .mydatagrid th

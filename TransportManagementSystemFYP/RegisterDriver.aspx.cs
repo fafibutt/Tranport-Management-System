@@ -48,7 +48,8 @@ namespace TransportManagementSystemFYP
                         sqlCommand.Parameters.AddWithValue("@status", Status);
                         conn.Open();
                         sqlCommand.ExecuteNonQuery();
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('Data insert successfully')");
+                        ClientScript.RegisterStartupScript(this.GetType(), "Success", "confirm('Driver Register sccessully')");
+                        Response.Redirect(Request.Url.AbsoluteUri);
                     }
                     catch (SqlException sqlExce)
                     {

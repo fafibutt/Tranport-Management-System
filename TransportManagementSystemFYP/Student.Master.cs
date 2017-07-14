@@ -11,7 +11,20 @@ namespace TransportManagementSystemFYP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UniId"] != null)
+            {
+                UserId.Text = Session["UniId"].ToString();
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
+        }
 
+        protected void BtnLogout_Click1(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Redirect("index.aspx");
         }
     }
 }
